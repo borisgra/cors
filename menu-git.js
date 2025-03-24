@@ -24,7 +24,7 @@ export function menuItemsData(newGreed)  {
                 sx: defColor
             },
             {
-                label: 'Soundproofing*+*+*+*ww',
+                label: 'Soundproofing*+*+*+*wwqqq',
                 sx: defColor,
                 delay: 300,
                 items: [
