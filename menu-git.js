@@ -5,6 +5,8 @@ export function menuItemsData(newGreed)  {
     // const baseUrlKoyeb = 'https://query-gra.koyeb.app'
     const baseUrlQuery = 'https://query-gra-hyx2izic7a-uc.a.run.app'
     const baseUrlDSV = 'https://dsv-hyx2izic7a-uc.a.run.app'
+    const host = window.location.origin
+    const git_menu = 'raw.githubusercontent.com/borisgra/cors/refs/heads/main'
     return  {
         label: 'menu',
         items: [
@@ -88,17 +90,17 @@ export function menuItemsData(newGreed)  {
             },
             {
                 label: 'menu load',
-                callback: (_, item) => window.open(`${window.location.origin}?menu=menu-load.js&title=${item.label}`, "_self"),
+                callback: (_, item) => window.open(`${host}?menu=menu-load.js&title=${item.label}`, "_self"),
                 sx: {color: 'green',bgcolor: '#c6ecc6'},
             },
             {
                 label: 'list menu on site',
-                callback: () => window.open(`${window.location.origin}/save/`, ""),
+                callback: () => window.open(`${host}/save/`, ""),
                 sx: {color: 'braun',bgcolor: '#c6ecc6'},
             },
             {
                 label: 'add new menu on site',
-                callback: () => window.open(`${window.location.origin}/save/?url=https://raw.githubusercontent.com/borisgra/cors/refs/heads/main/menu-git.js`, ""),
+                callback: () => window.open(`${host}/save/?url=https://${git_menu}/menu-git.js`, ""),
                 sx: {color: '#ff66ff',bgcolor: '#c6ecc6'},
             },
         ],
