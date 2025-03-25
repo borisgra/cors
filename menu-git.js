@@ -96,6 +96,11 @@ export function menuItemsData(newGreed)  {
                 callback: () => window.open(`${window.location.origin}/save/`, ""),
                 sx: {color: 'braun',bgcolor: '#c6ecc6'},
             },
+            {
+                label: 'add new menu on site',
+                callback: () => window.open(`${window.location.origin}/save/?url=https://raw.githubusercontent.com/borisgra/cors/refs/heads/main/menu-git.js`, ""),
+                sx: {color: '#ff66ff',bgcolor: '#c6ecc6'},
+            },
         ],
     }
 }
