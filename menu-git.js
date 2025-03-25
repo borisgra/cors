@@ -86,6 +86,16 @@ export function menuItemsData(newGreed)  {
                     },
                 ],
             },
+            {
+                label: 'menu load',
+                callback: (_, item) => window.open(`${window.location.origin}?menu=menu-load.js&title=${item.label}`, "_self"),
+                sx: {color: 'green',bgcolor: '#c6ecc6'},
+            },
+            {
+                label: 'list menu on site',
+                callback: () => window.open(`${window.location.origin}/save/`, ""),
+                sx: {color: 'braun',bgcolor: '#c6ecc6'},
+            },
         ],
     }
 }
