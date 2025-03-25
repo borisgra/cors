@@ -6,7 +6,8 @@ export function menuItemsData(newGreed)  {
     const baseUrlQuery = 'https://query-gra-hyx2izic7a-uc.a.run.app'
     const baseUrlDSV = 'https://dsv-hyx2izic7a-uc.a.run.app'
     const host = window.location.origin
-    const git_menu = 'raw.githubusercontent.com/borisgra/cors/refs/heads/main'
+    const git_menu_edit = 'https://github.com/borisgra/cors/edit/main/menu-git.js'
+    const git_menu_raw = 'raw.githubusercontent.com/borisgra/cors/refs/heads/main'
     return  {
         label: 'menu',
         items: [
@@ -100,9 +101,14 @@ export function menuItemsData(newGreed)  {
             },
             {
                 label: 'add new menu on site',
-                callback: () => window.open(`${host}/save/?url=https://${git_menu}/menu-git.js`, ""),
+                callback: () => window.open(`${host}/save/?url=https://${git_menu_raw}/menu-git.js`, ""),
                 sx: {color: '#ff66ff',bgcolor: '#c6ecc6'},
             },
+            {
+                label: 'edit menu on git',
+                callback: () => window.open(git_menu_edit, ""),
+                sx: {color: '#ff66ff',bgcolor: '#c6ecc6'},
+            },            
         ],
     }
 }
