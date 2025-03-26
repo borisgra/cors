@@ -91,7 +91,7 @@ export function menuItemsData(newGreed)  {
             },
             {
                 label: 'menu load',
-                callback: (_, item) => window.open(`${host}?menu=menu-load.js&title=${item.label}`, "_self"),
+                callback: (_, item) => window.open(`${host}?menu=menu-load.js`, "_self"),
                 sx: {color: 'green',bgcolor: '#c6ecc6'},
             },
             {
