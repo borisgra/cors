@@ -12,7 +12,7 @@ export function menuItemsData(newGreed)  {
         label: 'menu',
         items: [
             {
-                label: 'Olympic winners  GIT !!',
+                label: 'Olympic winners  GIT !! -3000',
                 callback: (_, item) => newGreed("https://www.ag-grid.com/example-assets/olympic-winners.json", item.label),
                 sx: defColor
             },
