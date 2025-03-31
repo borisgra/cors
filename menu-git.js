@@ -17,8 +17,8 @@ export function menuItemsData(newGreed)  {
                 sx: defColor
             },
             {
-                label: 'Clients query',
-                callback: (_, item) => newGreed("https://query-gra-hyx2izic7a-uc.a.run.app/bd/supabase/jsonPG/public.v_persons/ and status <> 'client'", item.label),
+                label: 'Clients query (local:3000)',
+                callback: (_, item) => newGreed("https://locahost:3000/bd/supabase/jsonPG/public.v_persons/ and status <> 'client'", item.label),
                 sx: defColor
             },
             {
