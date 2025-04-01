@@ -1,4 +1,5 @@
 
+
 export function menuItemsData(newGreed)  {
     const defColor = {color: '#0033cc',bgcolor: '#c6ecc6'}
     const baseUrl = 'https://query-gra-hyx2izic7a-uc.a.run.app'
@@ -92,17 +93,17 @@ export function menuItemsData(newGreed)  {
             },
             {
                 label: 'menu load',
-                callback: (_, item) => window.open(`${host}?menu=menu-load.js`, "_self"),
+                callback: (_, item) => window.open('?menu=menu-load.js', "_self"),
                 sx: {color: 'green',bgcolor: '#c6ecc6'},
             },
             {
                 label: 'list menu on site',
-                callback: () => window.open(`${host}/save/`, ""),
+                callback: () => window.open('/save/', ""),
                 sx: {color: 'braun',bgcolor: '#c6ecc6'},
             },
             {
                 label: 'add new menu on site',
-                callback: () => window.open(`${host}/save/?url=https://${git_menu_raw}/menu-git.js`, ""),
+                callback: () => window.open(`/save/?url=https://${git_menu_raw}/menu-git.js`, ""),
                 sx: {color: '#ff66ff',bgcolor: '#c6ecc6'},
             },
             {
