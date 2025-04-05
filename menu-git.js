@@ -3,7 +3,7 @@ export function menuItemsData(newGreed)  {
     const defColor = {color: '#0033cc',bgcolor: '#c6ecc6'}
     const host = window.location.origin
 //    console.log(`host=${host}`)
-    const localUrlQuery = 'http://localhost'
+//     const localUrlQuery = 'http://localhost'
     const baseUrlQuery = 'https://query-gra-hyx2izic7a-uc.a.run.app'
     const baseUrlDSV = 'https://dsv-hyx2izic7a-uc.a.run.app'
     const git_menu_edit = 'https://github.com/borisgra/cors/edit/main/menu-git.js'
@@ -12,18 +12,18 @@ export function menuItemsData(newGreed)  {
         label: 'menu',
         items: [
             {
-                label: 'Olympic winners  GIT ',
+                label: 'Olympic winners  GIT(local json) ',
                 callback: (_, item) => newGreed("https://www.ag-grid.com/example-assets/olympic-winners.json", item.label),
                 sx: defColor
             },
             {
-                label: 'Clients query (local)',
+                label: 'Persons all ',
                 callback: (_, item) => newGreed(`${host}/bd/QUERY_BD/jsonPG/v_persons`, item.label),
                 sx: defColor
             },
             {
-                label: 'Clients dsv',
-                callback: (_, item) => newGreed(`${baseUrlDSV}/bd/supabase/jsonPG/public.v_persons/ and status <> 'client'`, item.label),
+                label: 'Clients only',
+                callback: (_, item) => newGreed(`${host}/bd/QUERY_BD/jsonPG/public.v_persons/ and status <> 'client'`, item.label),
                 sx: defColor
             },
             {
@@ -32,13 +32,13 @@ export function menuItemsData(newGreed)  {
                 delay: 300,
                 items: [
                     {
-                        label: 'Today (query)',
-                        callback: (_, item) => newGreed(`${baseUrlQuery}/bd/daas_nma/jsonPG/v_history/ and  date(write_date)=current_date  order by id desc`, item.label),
+                        label: 'Today ',
+                        callback: (_, item) => newGreed(`${host}/bd/daas_nma/jsonPG/v_history/ and  date(write_date)=current_date  order by id desc`, item.label),
                         sx: defColor
                     },
                     {
-                        label: 'Month (query)',
-                        callback: (_, item) => newGreed(`${baseUrlQuery}/bd/daas_nma/jsonPG/v_history/ and  date(write_date)>=cast(TO_CHAR(NOW(), 'yyyy-mm-01')as date) order by id desc`, item.label),
+                        label: 'Month ',
+                        callback: (_, item) => newGreed(`${host}/bd/daas_nma/jsonPG/v_history/ and  date(write_date)>=cast(TO_CHAR(NOW(), 'yyyy-mm-01')as date) order by id desc`, item.label),
                         sx: defColor
                     },
                     {
@@ -52,8 +52,8 @@ export function menuItemsData(newGreed)  {
                         sx: defColor
                     },
                     {
-                        label: 'Year (working)',
-                        callback: (_, item) => newGreed(`${baseUrlQuery}/bd/daas_nma/jsonPG/v_users_working/   and  date(date_last)>=cast(TO_CHAR(NOW(), 'yyyy-01-01') as date) order by tests_count desc `, item.label),
+                        label: 'Year working ',
+                        callback: (_, item) => newGreed(`${host}/bd/daas_nma/jsonPG/v_users_working/   and  date(date_last)>=cast(TO_CHAR(NOW(), 'yyyy-01-01') as date) order by tests_count desc `, item.label),
                         sx: defColor,
                         disabled: false,
                     },
@@ -108,7 +108,7 @@ export function menuItemsData(newGreed)  {
                 label: 'edit menu on git',
                 callback: () => open(git_menu_edit, ""),
                 sx: {color: '#ff66ff',bgcolor: '#c6ecc6'},
-            },            
+            },
         ],
     }
 }
