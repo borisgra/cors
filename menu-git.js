@@ -7,6 +7,8 @@ export function menuItemsData(newGreed)  {
     const baseUrlQuery = 'https://query-gra-hyx2izic7a-uc.a.run.app'
     const baseUrlDSV = 'https://dsv-hyx2izic7a-uc.a.run.app'
     const host = window.location.origin
+    console.log('================')
+    console.log(host)
     const localUrlQuery = 'http://localhost:5004'
     console.log(`${localUrlQuery}/bd/QUERY_BD/jsonPG/v_persons`)
     const git_menu_edit = 'https://github.com/borisgra/cors/edit/main/menu-git.js'
