@@ -95,8 +95,13 @@ export function menuItemsData(newGreed)  {
                 sx: {color: 'green',bgcolor: '#c6ecc6'},
             },
             {
-                label: 'list menu on site',
+                label: 'list menus on site',
                 callback: () => open('/save/', ""),
+                sx: {color: 'braun',bgcolor: '#c6ecc6'},
+            },
+            {
+                label: 'Look menu on site',
+                callback: () => open('/menus/menu-git.js', ""),
                 sx: {color: 'braun',bgcolor: '#c6ecc6'},
             },
             {
