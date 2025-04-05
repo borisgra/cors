@@ -7,7 +7,8 @@ export function menuItemsData(newGreed)  {
     const baseUrlQuery = 'https://query-gra-hyx2izic7a-uc.a.run.app'
     const baseUrlDSV = 'https://dsv-hyx2izic7a-uc.a.run.app'
     const host = window.location.origin
-    const localUrlQuery = 'http://localhost:9090'
+    const localUrlQuery = 'http://localhost:5004'
+    console.log(`${localUrlQuery}/bd/QUERY_BD/jsonPG/v_persons`)
     const git_menu_edit = 'https://github.com/borisgra/cors/edit/main/menu-git.js'
     const git_menu_raw = 'raw.githubusercontent.com/borisgra/cors/refs/heads/main'
     return  {
@@ -20,7 +21,7 @@ export function menuItemsData(newGreed)  {
             },
             {
                 label: 'Clients query (local:5004)',
-                callback: (_, item) => newGreed(`${host}/bd/QUERY_BD/jsonPG/v_persons`, item.label),
+                callback: (_, item) => newGreed(`${localUrlQuery}/bd/QUERY_BD/jsonPG/v_persons`, item.label),
                 sx: defColor
             },
             {
