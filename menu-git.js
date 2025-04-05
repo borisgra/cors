@@ -17,8 +17,8 @@ export function menuItemsData(newGreed)  {
                 sx: defColor
             },
             {
-                label: 'Clients query (local:5004)',
-                callback: (_, item) => newGreed('/bd/QUERY_BD/jsonPG/v_persons', item.label),
+                label: 'Clients query (local)',
+                callback: (_, item) => newGreed(`${host}/bd/QUERY_BD/jsonPG/v_persons', item.label),
                 sx: defColor
             },
             {
