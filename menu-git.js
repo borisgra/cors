@@ -22,7 +22,7 @@ export function menuItemsData(newGreed)  {
                 sx: defColor
             },
             {
-                label: 'Clients only',
+                label: 'Without Clients',
                 callback: (_, item) => newGreed(`${host}/bd/QUERY_BD/jsonPG/public.v_persons/ and status <> 'client'`, item.label),
                 sx: defColor
             },
