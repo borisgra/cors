@@ -3,7 +3,7 @@ export function menuItemsData(newGreed)  {
     const defColor = {color: '#0033cc',bgcolor: '#c6ecc6'}
     const host = window.location.origin
 //    console.log(`host=${host}`)
-//     const localUrlQuery = 'http://localhost'
+     const localUrlQuery = 'http://localhost:3000'
     const baseUrlQuery = 'https://query-gra-hyx2izic7a-uc.a.run.app'
     const baseUrlDSV = 'https://dsv-hyx2izic7a-uc.a.run.app'
     const git_menu_edit = 'https://github.com/borisgra/cors/edit/main/menu-git.js'
@@ -18,7 +18,7 @@ export function menuItemsData(newGreed)  {
             },
             {
                 label: 'Persons all ',
-                callback: (_, item) => newGreed(`${host}/bd/QUERY_BD/jsonPG/v_persons`, item.label),
+                callback: (_, item) => newGreed(`${localUrlQuery}/bd/QUERY_BD/jsonPG/v_persons`, item.label),
                 sx: defColor
             },
             {
